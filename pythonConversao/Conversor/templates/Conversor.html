@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Moeda</title>
+</head>
+<body>
+    <h1>Conversor de Moeda</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="number" name="amount" step="any" placeholder="Enter amount" required><br><br>
+        <select name="source_currency" required>
+            {% for moeda in moedas %}
+                <option value="{{ moeda.codigo }}">{{ moeda.nome }}</option>
+            {% endfor %}
+        </select>
+        <span>to</span>
+        <select name="target_currency" required>
+            {% for moeda in moedas %}
+                <option value="{{ moeda.codigo }}">{{ moeda.nome }}</option>
+            {% endfor %}
+        </select><br><br>
+        <button type="submit">Converter</button>
+    </form>
+</body>
+</html>
