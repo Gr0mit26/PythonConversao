@@ -5,7 +5,9 @@
     <title>Conversor de Moeda - Resultado</title>
 </head>
 <body>
-    <h1>Resultado da Conversão</h1>
-    <p>{{ quantidade }} {{ moeda_base }} = {{ valor_convertido }} {{ moeda_objetivo }}</p>
+    <center>
+        <h1 style="color: red;">Resultado da Conversão</h1>
+        <p>{{ quantidade|floatformat:2 }} {{ moeda_base }} = {{ valor_convertido|floatformat:2 }} {{ moeda_objetivo }}</p>
+    </center>
 </body>
 </html>
