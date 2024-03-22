@@ -8,14 +8,14 @@
     <h1>Conversor de Moeda</h1>
     <form method="post">
         {% csrf_token %}
-        <input type="number" name="amount" step="any" placeholder="Enter amount" required><br><br>
+        <input type="number" name="quantidade" step="any" placeholder="Insira quantidade" required><br><br>
         <select name="source_currency" required>
             {% for moeda in moedas %}
                 <option value="{{ moeda.codigo }}">{{ moeda.nome }}</option>
             {% endfor %}
         </select>
         <span>to</span>
-        <select name="target_currency" required>
+        <select name="moeda_objetivo" required>
             {% for moeda in moedas %}
                 <option value="{{ moeda.codigo }}">{{ moeda.nome }}</option>
             {% endfor %}

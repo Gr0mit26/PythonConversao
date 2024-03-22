@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('Conversor.urls')),
+    path('conversor/', include('Conversor.urls')),
 ]
